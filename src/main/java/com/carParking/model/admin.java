@@ -1,7 +1,12 @@
 package com.carParking.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class admin {
 
+	@Id
 	private int id;
 	private String name;
 	private String username;
@@ -36,6 +41,9 @@ public class admin {
 		this.name = name;
 		this.username = username;
 		this.password = password;
+	}
+	public admin() {
+		// TODO Auto-generated constructor stub
 	}
 	
 	

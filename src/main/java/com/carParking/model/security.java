@@ -1,11 +1,13 @@
 package com.carParking.model;
 
+import java.time.LocalDate;
+
 public class security {
 
 	private int securityId;
 	private String securityName;
-	private String inTime;
-	private String outTime;
+	private LocalDate inTime;
+	private LocalDate outTime;
 	private long tokenNo;
 	private String username;
 	private String password;
@@ -23,16 +25,16 @@ public class security {
 	public void setSecurityName(String securityName) {
 		this.securityName = securityName;
 	}
-	public String getInTime() {
+	public LocalDate getInTime() {
 		return inTime;
 	}
-	public void setInTime(String inTime) {
+	public void setInTime(LocalDate inTime) {
 		this.inTime = inTime;
 	}
-	public String getOutTime() {
+	public LocalDate getOutTime() {
 		return outTime;
 	}
-	public void setOutTime(String outTime) {
+	public void setOutTime(LocalDate outTime) {
 		this.outTime = outTime;
 	}
 	public long getTokenNo() {
@@ -65,7 +67,7 @@ public class security {
 	public void setVehicleNo(String vehicleNo) {
 		this.vehicleNo = vehicleNo;
 	}
-	public security(int securityId, String securityName, String inTime, String outTime, long tokenNo, String username,
+	public security(int securityId, String securityName, LocalDate inTime, LocalDate outTime, long tokenNo, String username,
 			String password, int managerId, String vehicleNo) {
 		super();
 		this.securityId = securityId;
