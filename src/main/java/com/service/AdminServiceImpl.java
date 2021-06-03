@@ -20,18 +20,18 @@ public class AdminServiceImpl implements AdminService{
 	AdminRepo adminrepo;
 	
 	@Override
-	public ResponseEntity<Object> addParkingLots(Admin admin) {
+	public ResponseEntity<Object> addParkingLots(AdminDto adminDtoObj) {
 
 		Admin admindb = new Admin();
-		admindb.setParkingLotId(admin.getParkingLotId());
-		admindb.setNoOfFloors(admin.getNoOfFloors());
-		admindb.setTotalSpots(admin.getTotalSpots());
-		admindb.setOccupiedSpots(admin.getOccupiedSpots());
+		admindb.setParkingLotId(adminDtoObj.getParkingLotId());
+		admindb.setNoOfFloors(adminDtoObj.getNoOfFloors());
+		admindb.setTotalSpots(adminDtoObj.getTotalSpots());
+		admindb.setOccupiedSpots(adminDtoObj.getOccupiedSpots());
 		
-		Admin ad = adminrepo.save(admindb);
+		adminrepo.save(admindb);
 		
 		
-		return new ResponseEntity<Object>(admin, HttpStatus.OK);
+		return new ResponseEntity<Object>(admindb, HttpStatus.OK);
 	}
 
 	@Override
