@@ -8,10 +8,10 @@
 		<version>2.5.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.CarParking.Security</groupId>
-	<artifactId>Security</artifactId>
+	<groupId>com.carparking.security</groupId>
+	<artifactId>AdminParkingDetails</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>CarParkingSecuriyModule</name>
+	<name>CarParkingSecurityService</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
