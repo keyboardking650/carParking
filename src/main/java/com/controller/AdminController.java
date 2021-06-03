@@ -23,9 +23,9 @@ public class AdminController {
 	AdminService adminservice;
 	
 	@PostMapping("/addparkinglots")
-	public ResponseEntity<Object> addParkingLots(Admin adminDtoObj) {
-		Admin admin = adminDtoObj;
-		return adminservice.addParkingLots(admin);
+	public ResponseEntity<Object> addParkingLots(@RequestBody AdminDto adminDtoObj) {
+		System.out.println(adminDtoObj.getNoOfFloors());
+		return adminservice.addParkingLots(adminDtoObj);
 	}
 	
 	@GetMapping("/getparkinglotdetails")
